@@ -11,6 +11,12 @@
 		BF41E4181AC5FB2400A1DDB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF70E5141ABF135D00B4FDD4 /* Foundation.framework */; };
 		BF70E5061ABF12BC00B4FDD4 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70E5051ABF12BC00B4FDD4 /* Async.swift */; };
 		BF70E5151ABF135D00B4FDD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF70E5141ABF135D00B4FDD4 /* Foundation.framework */; };
+		DCAE02291BA9BCA30078CE89 /* AsyncHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAE02281BA9BCA30078CE89 /* AsyncHelper.m */; };
+		DCAE022A1BA9BCA30078CE89 /* AsyncHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAE02281BA9BCA30078CE89 /* AsyncHelper.m */; };
+		DCB2F6281BA9C00D0047C12B /* AsyncHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAE022B1BA9BCA80078CE89 /* AsyncHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DCB2F6291BA9C0150047C12B /* AsyncHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAE022B1BA9BCA80078CE89 /* AsyncHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DCB2F62B1BA9C2300047C12B /* Async-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2F62A1BA9C2300047C12B /* Async-Bridging-Header.h */; };
+		DCB2F62C1BA9C24A0047C12B /* Async-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2F62A1BA9C2300047C12B /* Async-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,9 @@
 		BF70E5051ABF12BC00B4FDD4 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/Async.swift; sourceTree = SOURCE_ROOT; };
 		BF70E5071ABF131400B4FDD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		BF70E5141ABF135D00B4FDD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCAE02281BA9BCA30078CE89 /* AsyncHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncHelper.m; path = Source/AsyncHelper.m; sourceTree = SOURCE_ROOT; };
+		DCAE022B1BA9BCA80078CE89 /* AsyncHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncHelper.h; path = Source/AsyncHelper.h; sourceTree = SOURCE_ROOT; };
+		DCB2F62A1BA9C2300047C12B /* Async-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Async-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				BF70E5051ABF12BC00B4FDD4 /* Async.swift */,
+				DCB2F62A1BA9C2300047C12B /* Async-Bridging-Header.h */,
+				DCAE022B1BA9BCA80078CE89 /* AsyncHelper.h */,
+				DCAE02281BA9BCA30078CE89 /* AsyncHelper.m */,
 				BF70E4EC1ABF124A00B4FDD4 /* Supporting Files */,
 			);
 			path = Async;
@@ -83,6 +95,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB2F6281BA9C00D0047C12B /* AsyncHelper.h in Headers */,
+				DCB2F62C1BA9C24A0047C12B /* Async-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB2F62B1BA9C2300047C12B /* Async-Bridging-Header.h in Headers */,
+				DCB2F6291BA9C0150047C12B /* AsyncHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAE022A1BA9BCA30078CE89 /* AsyncHelper.m in Sources */,
 				BF41E4161AC5FB2400A1DDB2 /* Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAE02291BA9BCA30078CE89 /* AsyncHelper.m in Sources */,
 				BF70E5061ABF12BC00B4FDD4 /* Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +235,7 @@
 				PRODUCT_NAME = Async;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Async-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -236,6 +255,7 @@
 				PRODUCT_NAME = Async;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Async-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -338,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dk.developmunk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Async;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Async-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -354,6 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dk.developmunk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Async;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Async-Bridging-Header.h";
 			};
 			name = Release;
 		};
